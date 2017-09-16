@@ -5,9 +5,13 @@ N26Application is an Restful APIs for transactions. The following are the featur
 
 - POST /n26app/transactions -
 This Rest endpoint is to post transaction and it returns codes : 
+
 	a) 201 - Successfully Created 
+	
 	b) 204 - No Content - Transaction is not posted as it is older than 60 secs
+	
 	c) 400 - Bad Request -  If the input Data is invalid like amount <=0 and timestamp is invalid
+	
 Sample request JSON -
  {
 	"amount":12.44,
@@ -16,16 +20,18 @@ Sample request JSON -
 
 - GET /n26app/transactions -
 This Rest endpoint returns the list of transactions posted to the application
+
 Sample response JSON - 
-[
+ [
   {
     "amount": 12.44,
     "timestamp": 1505588558079
   }
-]
+ ]
 
 - GET /n26app/transactions -
 This Rest endpoint returns statistics of the transactions happened not before 60 secs
+
 Sample response JSON - 
 {
   "sum": 12.44,
@@ -42,6 +48,7 @@ tatarunaggarwal@gmail.com
 
 ## Pre-requisite 
 JAVA 1.8
+
 Maven
 
 Demo Setup:
